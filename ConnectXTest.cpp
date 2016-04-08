@@ -114,6 +114,8 @@ TEST(ConnectXTest, showBoardToggleCheck){
 	ConnectX con(2,2,2);
 	con.placePiece(1);//b
 	con.showBoard();
+	con.placePiece(1);//w
+	con.showBoard();
 	con.placePiece(1);//b
 	con.showBoard();
 }
@@ -149,3 +151,7 @@ TEST(ConnectXTest, invalidLocationCheck){
 	ASSERT_EQ(-1,con.at(20,5));
 }
 
+TEST(ConnectXTest, widInvalidCheck){
+	ConnectX con;
+	ASSERT_EQ(-1,con.at(20,5));
+}
