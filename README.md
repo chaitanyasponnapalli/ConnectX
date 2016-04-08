@@ -1,4 +1,6 @@
 Chaitanya ponnapalli
+
+
 Bugs:
 1. In inBounds(int w, int h) method, if the value of height is in bounds(valid value) but width is invalid(out of bounds), the flag(inside) is set to true. This will result in the return value for an invalid location, to be returned as true, indicating the invalid location to be in bounds. This results in incorrect bound checking. 
 The branch condition should be:
